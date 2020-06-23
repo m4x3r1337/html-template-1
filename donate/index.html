@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>m4x3r > Donate</title>
+        <meta property="og:title" content="m4x3r > Donate">
+        <meta property="og:locale" content="en_EU">
+        <meta property="og:description" content="Donate to m4x3r">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../assets/favico/eblan.png" type="image/png">
+		<script src="https://sindresorhus.com/devtools-detect/index.js"></script>
+		<link rel="stylesheet" href="../assets/vars.css">
+		<link rel="stylesheet" href="../assets/fonts/gothampro/style.css">
+		<link rel="stylesheet" href="../assets/css/donate/style.css">
+        <meta name="theme-color" content="#C21CC7">
+	</head>
+	<body class="center">
+        <script>
+                document.body.style.backgroundImage = "url('../assets/anims/aye.gif')";
+        </script>
+        <audio autoplay loop id="player">
+            <source src="../assets/sounds/play.mp3">
+            <script>
+                document.currentScript.parentElement.volume = 0.50;
+            </script>
+        </audio>
+		<div class="center menu">
+            <h2>Donation for m4x3r</h2>
+			<a href="https://www.tinkoff.ru/sl/3NrUnuqjruj"><span style="color: yellow;">Tinkoff</span></a>
+            <a href="https://qiwi.com/n/m4x3r1337"><span style="color: orangered;">QIWI</span></a>
+            <hr width="295">
+            <a href="..">Go back</a>
+		</div>
+    </body>
+    <script>
+		// ОНО НЕ РАБОТАЕТ СПАСИБО ЖС СПАСИБО ИДИ НАХУЙ
+        console.log('Пасхалка не работает идите нахуй')
+        if (getComputedStyle(document.body).getPropertyValue('--has-pasxalka-work') == "true") {
+            if(window.devtools.isOpen) { window.location.href = getComputedStyle(document.body).getPropertyValue('--pasxalka'); }
+            window.addEventListener('devtoolschange', event => { window.location.href = getComputedStyle(document.body).getPropertyValue('--pasxalka'); });
+        }
+    </script>
+</html>

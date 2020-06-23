@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>m4x3r.</title>
+        <meta property="og:title" content="m4x3r">
+        <meta property="og:locale" content="en_EU">
+        <meta property="og:description" content="m4x3r's main page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/favico/eblan.png" type="image/png">
+        <script src="https://sindresorhus.com/devtools-detect/index.js"></script>
+        <link rel="stylesheet" href="assets/fonts/gothampro/style.css">
+        <link rel="stylesheet" href="assets/vars.css">
+        <link rel="stylesheet" href="assets/css/index/style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="assets/js/text.js"></script>
+        <script src="assets/js/typed.min.js"></script>
+        <meta name="theme-color" content="#C21CC7">
+        
+    </head>
+    <body class="center">
+        <script>
+                document.body.style.backgroundImage = "url('assets/anims/aye.gif')";
+        </script>
+        <div id="donate">
+            <div class="popup">
+                <h1>Donate</h1>
+                <p align="center">
+                    <h3><span class="font-size=larger">Отправляя донат, вы поддерживаете автора и оплачиваете ему проезд в общественном транспорте.</span></h3>                    
+                    <h2>Select payment method</h2>
+                    <p align="center">
+						<input type="button" class="btn" value="Tinkoff" onclick="location.href='https://www.tinkoff.ru/sl/3NrUnuqjruj'">
+                        <input type="button" class="btn" value="QIWI" onclick="location.href='https://qiwi.com/n/m4x3r1337'">
+                    </p>
+                    <p align="center"><input class="btn" type="button" value="Close" title="Close" onclick="document.getElementById('donate').style.display='none';"></p>
+                </p>
+            </div>
+        </div>
+        <div id="gitlink">
+            <div class="popup">
+                <h1>Git</h1>
+                <p align="center">
+                    <h3><span class="font-size=larger">Хранилище моих проектов кароче</span></h3>                    
+                    <h2>Select Git page</h2>
+                    <p align="center">
+                        <input type="button" class="btn" value="GitHub" onclick="location.href='https://github.com/m4x3r1337'">
+                        <input type="button" class="btn" value="GitLab" onclick="location.href='https://gitlab.com/m4x3r1337'">
+                    </p>
+                    <p align="center"><input class="btn" type="button" value="Close" title="Close" onclick="document.getElementById('gitlink').style.display='none';"></p>
+                </p>
+            </div>
+        </div>
+        <audio autoplay loop id="player">
+            <source src="assets/sounds/play.mp3">
+            <script>
+                document.currentScript.parentElement.volume = 0.50;
+            </script>
+        </audio>
+        <header class="center info">
+            <div class="center pizdec">
+                <div class="avatar-container"><img src="assets/images/ava.jpg" oncontextmenu="return false;" class="avatar"></div>
+                <h2><span id="name"></span></h2>
+                <hr width="295">
+                <h3><span class="typed">aye</span><span class="typed-cursor">|</span></h3>
+                <hr width="295">
+                <h2>Links</h2>
+            </div>
+            <div class="buttons">
+                <a href="javascript://" class="link" onclick="location.href='http://rsdev.ml/telegram?username=m4x3r1337'">Telegram</a>
+                <a href="javascript://" class="link" onclick="location.href='https://vk.com/m4x3r1337'">VK</a>
+                <a href="javascript://" class="link" onclick="location.href='https://steamcommunity.com/id/pojilaya_skymbriya/'">Steam</a>
+            </div>
+            <div class="buttons">
+                <a href="javascript://" class="link" onclick="document.getElementById('gitlink').style.display='block'">Git</a>
+            </div>
+            <div class="buttons">
+                <a href="javascript://" class="link" onclick="document.getElementById('donate').style.display='block'">Donate</a>
+            </div>
+        </header>
+    </body>
+    <script>
+        $("#name").text(getComputedStyle(document.body).getPropertyValue('--name'))
+        $("#description").text(getComputedStyle(document.body).getPropertyValue('--description'))
+        // ОНО НЕ РАБОТАЕТ СПАСИБО ЖС СПАСИБО ИДИ НАХУЙ
+        console.log('Пасхалка не работает идите нахуй')
+        if (getComputedStyle(document.body).getPropertyValue('--has-pasxalka-work') == "true") {
+            if(window.devtools.isOpen) { window.location.href = getComputedStyle(document.body).getPropertyValue('--pasxalka'); }
+            window.addEventListener('devtoolschange', event => { window.location.href = getComputedStyle(document.body).getPropertyValue('--pasxalka'); });
+        }
+    </script>
+</html>
